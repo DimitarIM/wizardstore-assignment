@@ -28,11 +28,11 @@ export const useLocalStorage = () => {
     }
 
     const getItems = () => {
-            let items:Item[] = [],
+            const items:Item[] = [],
                 keys = Object.keys(localStorage);
 
             for (let i = 0; i < keys.length; i++) {
-                let item:Item = {
+                const item:Item = {
                     name: keys[i],
                     value: keys[i] ? localStorage.getItem(keys[i]) : null
                 }
